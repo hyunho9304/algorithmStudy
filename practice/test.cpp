@@ -1,16 +1,28 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
+int n = 5, k = 3, a[5] = {1, 2, 3, 4, 5};
+
+void print(vector<int> b) {
+    for (int i : b) cout << a[i] << " ";
+    cout << '\n';
+}
+
+void combi(int start, vector<int>& b) {
+    if (b.size() == k) {
+        print(b);
+        return;
+    }
+    for (int i = start + 1; i < n; i++) {
+        b.push_back(i);
+        combi(i, b);
+        b.pop_back();
+    }
+    return;
+}
+
 int main() {
-
-    vector<int> v = { 1 ,1 , 2 ,2, 3 ,3, 4 , 5 , 5 , 6 , 7 };
-    sort(v.begin(), v.end() );
-    
-    v.erase( unique(v.begin(), v.end()), v.end());
-
-    for( int vectorIt : v )
-        cout << vectorIt << " " ;
-    cout << "\n" ;
-
-    return 0 ;
+    vector<int> b;
+    combi(-1, b);
+    return 0;
 }
