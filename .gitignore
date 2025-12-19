@@ -39,3 +39,30 @@
 
 # debug information files
 *.dwo
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+.fseventsd
+
+# VS Code
+.vscode/
+
+# C/C++ build artifacts
+*.o
+*.obj
+*.out
+*.exe
+*.a
+*.so
+*.dylib
+*.dll
+
+# Logs & temp
+*.log
+*.tmp
