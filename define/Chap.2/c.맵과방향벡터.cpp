@@ -4,6 +4,10 @@ const int N = 3;
 int a[N][N], visited[N][N];
 const int dy[] = {-1, 0, 1, 0};
 const int dx[] = {0, 1, 0, -1};
+/*
+const int dy[] = {-1, -1, 0, 1, 1, 1, 0, -1};
+const int dx[] = {0, 1, 1, 1, 0, -1, -1, -1};
+*/
 
 void go(int y, int x){
 
