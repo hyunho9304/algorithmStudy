@@ -1,3 +1,4 @@
+//  BFS는 가는경로이다. 큐다.
 #include<bits/stdc++.h>
 using namespace std ;
 
@@ -10,7 +11,6 @@ int y , x ;
 
 int a[maxN][maxN];
 int visited[maxN][maxN] ;
-vector<int> adj[maxN];
 
 const int dy[] = {-1, 0, 1, 0};
 const int dx[] = {0, 1, 0, -1};

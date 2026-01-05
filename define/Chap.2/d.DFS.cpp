@@ -30,6 +30,7 @@
 //     return 0;
 // }
 
+//  DFS는 연결된 컴포넌트 이다.
 
 #include<bits/stdc++.h>
 using namespace std;
