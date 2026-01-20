@@ -4,6 +4,7 @@ using namespace std ;
 vector<int> adj[1004];
 int visited[1004] ;
 
+//  왼쪽 오른쪽 나
 void postorder( int here) {
 
     if( visited[here] == false ) {
@@ -17,6 +18,7 @@ void postorder( int here) {
     }
 }
 
+//  나 왼쪽 오른쪽
 void preorder( int here ) {
 
     if( visited[here] == false ) {
@@ -31,6 +33,7 @@ void preorder( int here ) {
     }
 }
 
+//  왼쪽 나 오른쪽
 void inorder( int here ) {
 
     if( visited[here] == false ) {
