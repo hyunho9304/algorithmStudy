@@ -70,3 +70,36 @@ int main() {
     cout << "6 ) " << ( 1 << n ) - 1 << "\n";
 
 
+
+
+/*
+    
+
+__builtin_popcount(i) 는 1의 갯수
+
+
+    for (int i = 0; i < (1 << N); i++) {
+        if (__builtin_popcount(i) != N / 2) continue;
+
+        cout << "리셋" << "\n";
+
+        vector<int> teamA, teamB;
+        teamA.reserve(N / 2);
+        teamB.reserve(N / 2);
+
+        for (int j = 0; j < N; j++) {
+            if (i & (1 << j)) teamA.push_back(v[j]);
+            else teamB.push_back(v[j]);
+        }
+
+        cout << "Ateam" << "\n";
+        for (int num : teamA) cout << num << " ";
+        cout << "\n";
+
+        cout << "Bteam" << "\n";
+        for (int num : teamB) cout << num << " ";
+        cout << "\n";
+    }
+
+    return 0 ;
+*/
