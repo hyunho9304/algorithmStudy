@@ -1,18 +1,19 @@
-//  트레이스 가능한 로직
-
 #include<bits/stdc++.h>
 using namespace std ;
 
-int N , ret ;
-int a[1001];
-int cnt[1001] ;
-int prevList[1001];
-int idx ;
+const int max_n = 1004;
+
+int N ;
+int a[max_n];
+int cnt[max_n];
+int prevList[max_n] ;
+
+int ret , idx ;
 vector<int> v ;
 
 void go( int idx ) {
 
-    if( idx == -1 ) return ;
+    if( idx  == -1 ) return ;
 
     v.push_back( a[idx] ) ;
     go( prevList[idx] ) ;
@@ -22,8 +23,8 @@ void go( int idx ) {
 
 int main() {
 
-    fill( prevList, prevList + 1001 , -1 ) ;
-    fill( cnt, cnt + 1001 , 1 ) ;
+    fill( cnt, cnt + max_n , 1 ) ;
+    fill( prevList, prevList + max_n , -1 ) ;
 
     cin >> N ;
     for( int i = 0 ; i < N ; i++ ) {
@@ -31,13 +32,14 @@ int main() {
     }
 
     for( int i = 0 ; i < N ; i++ ) {
-
         for( int j = 0 ; j < i ; j++ ) {
-            
-            if( a[j] < a[i] && cnt[i] < cnt[j]+1 ) {
-                
+
+            if( a[j] < a[i] && cnt[i] < cnt[j] + 1 ) {
+
                 cnt[i] = cnt[j] + 1 ;
                 prevList[i] = j ;
+
+                
             }
         }
 
@@ -47,9 +49,9 @@ int main() {
         }
     }
 
-    cout << ret << "\n" ;
     go( idx ) ;
 
+    cout << ret << "\n";
     for( int i = v.size() -1 ; i >= 0 ; i-- ) {
         cout << v[i] << " " ;
     }
