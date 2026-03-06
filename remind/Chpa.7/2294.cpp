@@ -1,5 +1,5 @@
 /*
-    DP - 바텀업으로 갱신하면서 min값 저장
+    DP - 바텀업으로 갱신하면서 min값 저장 - 배낭
 */
 #include<bits/stdc++.h>
 using namespace std ;
