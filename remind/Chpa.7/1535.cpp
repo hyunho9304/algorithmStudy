@@ -1,5 +1,5 @@
 /*
-    DP - 배낭( 한개 )
+    DP - 배낭( 한개 ) - 내림차순
 */
 #include<bits/stdc++.h>
 using namespace std ;

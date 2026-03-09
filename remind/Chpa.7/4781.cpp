@@ -1,5 +1,5 @@
 /*
-    DP - 오름차순( 배낭 )
+    DP - 배낭(무한) - 오름차순
 */
 #include<bits/stdc++.h>
 using namespace std ;
