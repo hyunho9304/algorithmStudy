@@ -2,7 +2,7 @@
 using namespace std ;
 
 const int max_n = 4 ;
-string a[max_n] = { "사과", "딸기", "포도", "배" } ;
+string a[max_n] = { "1", "2", "3", "4" } ;
 
 
 void go( int num ) {
@@ -32,11 +32,11 @@ int main() {
     cout << "\n" ;
 
 
-    for( int i = 0 ; i < max_n ; i++ ) {
-        go( 1 | ( 1 << i ) ) ;
-    }
+    // for( int i = 0 ; i < max_n ; i++ ) {
+    //     go( 1 | ( 1 << i ) ) ;
+    // }
 
-    return 0 ;
+    // return 0 ;
 
 
 }
